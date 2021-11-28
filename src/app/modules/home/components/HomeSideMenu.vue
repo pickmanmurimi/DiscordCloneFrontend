@@ -20,10 +20,11 @@
         </li>
         <!--    nitro-->
         <li class="sidemenu-items flex items-center">
-          <router-link :class="{ 'sidemenu-item-active' : route.name === 'Nitro'}" :to="{ name: 'Nitro'}"
+          <router-link :class="{ 'bg-gradient-to-r from-indigo-500 to-blue-400' : route.name === 'Nitro'}"
+                       :to="{ name: 'Nitro'}"
                        class="sidemenu-item">
-            <NitroIcon class="mr-4"/>
-            <span class="font-medium">Nitro</span>
+            <NitroIcon class="mr-4" :class="{'text-white' : route.name === 'Nitro'}"/>
+            <span class="font-medium" :class="{'text-white' : route.name === 'Nitro'}">Nitro</span>
           </router-link>
         </li>
       </ul>
