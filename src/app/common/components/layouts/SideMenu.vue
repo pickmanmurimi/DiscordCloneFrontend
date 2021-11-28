@@ -1,5 +1,5 @@
 <template>
-  <nav class="min-h-screen absolute sidemenu">
+  <nav class="min-h-screen absolute sidemenu dark:bg-discord-black-400 bg-gray-200">
     <!--    search bar-->
     <div class="sidemenu-title flex items-center shadow">
       <button class="searchbar-btn font-medium" type="button">
@@ -11,14 +11,14 @@
     <ul class="mt-2">
       <!--    friends-->
       <li class="sidemenu-items flex items-center">
-        <a href="#" class="text-gray-50 sidemenu-items-active w-full h-full rounded flex items-center px-2">
+        <a href="#" class="sidemenu-item-active sidemenu-item">
           <UserCircleIcon style="height: 24px;" class="pr-4" />
           <span class="font-medium">Friends</span>
         </a>
       </li>
       <!--    nitro-->
       <li class="sidemenu-items flex items-center">
-        <a href="#" class="text-gray-400 w-full h-full rounded flex items-center px-2">
+        <a href="#" class="sidemenu-item">
           <SupportIcon style="height: 24px;" class="pr-4" />
           <span class="font-medium">Nitro</span>
         </a>
@@ -38,7 +38,6 @@ import { SupportIcon } from '@heroicons/vue/solid'
 .sidemenu {
   width: 240px;
   margin-left: 72px;
-  background: #2f3136;
 }
 
 .sidemenu-title {
@@ -53,7 +52,11 @@ import { SupportIcon } from '@heroicons/vue/solid'
   padding-right: 10px;
 }
 
-.sidemenu-items-active {
-  background: #393c43;
+.sidemenu-item {
+  @apply w-full h-full rounded flex items-center px-2 text-gray-400;
+}
+
+.sidemenu-item-active {
+  @apply dark:text-gray-50 dark:bg-discord-black-200 bg-gray-100 text-gray-600;
 }
 </style>

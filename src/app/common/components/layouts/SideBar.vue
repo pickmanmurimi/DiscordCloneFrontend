@@ -1,10 +1,11 @@
 <template>
-  <nav class="min-h-screen absolute sidebar">
+  <nav class="min-h-screen absolute sidebar dark:bg-discord-black-500 bg-gray-100">
     <ul class="">
       <!--      Home-->
       <li class="flex justify-center relative items-center">
-        <span class="nav-item-bar bg-gray-50 absolute left-0 rounded-tr-2xl rounded-br-2xl"></span>
-        <a class="bg-gray-50 flex justify-center items-center nav-item rounded-2xl" href="#">
+        <span class="nav-item-bar"></span>
+        <a class="bg-gray-50 flex justify-center items-center nav-item rounded-2xl
+          border-gray-300 border shadow" href="#">
           <img alt="discord logo" class="main-nav-logo" src="@assets/discord-logo.png">
         </a>
       </li>
@@ -17,45 +18,40 @@
       <!-- ------------------------------------------------------------------------------------------------ -->
       <!--      server 1-->
       <li class="flex justify-center relative items-center group mb-2">
-        <span class="nav-item-bar bg-gray-50 absolute left-0 rounded-tr-2xl rounded-br-2xl"></span>
-        <a class="bg-gray-50 flex justify-center items-center
-        nav-item rounded-full group-hover:rounded-2xl overflow-hidden" href="#">
+        <span class="nav-item-bar"></span>
+        <a class="nav-link nav-item" href="#">
           <img alt="laravel logo" class="object-cover w-full h-full nav-logo"
                src="@assets/servers/laravel.png">
         </a>
       </li>
       <!--      server 2-->
       <li class="flex justify-center relative items-center group mb-2">
-        <span class="nav-item-notification-indicator bg-gray-50 absolute left-0 rounded-tr-2xl rounded-br-2xl"></span>
-        <a class="bg-gray-50 flex justify-center items-center
-        nav-item rounded-full group-hover:rounded-2xl overflow-hidden" href="#">
+        <span class="nav-item-notification-indicator"></span>
+        <a class="nav-link nav-item" href="#">
           <img alt="tailwind logo" class="object-cover w-full h-full nav-logo"
                src="@assets/servers/tailwind.png">
         </a>
       </li>
       <!--      server 3-->
       <li class="flex justify-center relative items-center group mb-2">
-        <span class="nav-item-notification-indicator bg-gray-50 absolute left-0 rounded-tr-2xl rounded-br-2xl"></span>
-        <a class="bg-gray-50 flex justify-center items-center
-        nav-item rounded-full group-hover:rounded-2xl overflow-hidden" href="#">
+        <span class="nav-item-notification-indicator"></span>
+        <a class="nav-link nav-item" href="#">
           <img alt="arch tech logo" class="object-cover w-full h-full nav-logo"
                src="@assets/servers/archtech.png">
         </a>
       </li>
       <!--      server 4-->
       <li class="flex justify-center relative items-center group mb-2">
-        <span class="nav-item-notification-indicator bg-gray-50 absolute left-0 rounded-tr-2xl rounded-br-2xl"></span>
-        <a class="bg-gray-50 flex justify-center items-center
-        nav-item rounded-full group-hover:rounded-2xl overflow-hidden" href="#">
+        <span class="nav-item-notification-indicator"></span>
+        <a class="nav-link nav-item" href="#">
           <img alt="apex legends logo" class="object-cover w-full h-full nav-logo"
                src="@assets/servers/apexlegends.png">
         </a>
       </li>
       <!--      server 5-->
       <li class="flex justify-center relative items-center group mb-2">
-        <span class="nav-item-notification-indicator bg-gray-50 absolute left-0 rounded-tr-2xl rounded-br-2xl"></span>
-        <a class="bg-gray-50 flex justify-center items-center
-        nav-item rounded-full group-hover:rounded-2xl overflow-hidden" href="#">
+        <span class="nav-item-notification-indicator"></span>
+        <a class="nav-link nav-item" href="#">
           <img alt="irup io logo" class="object-cover w-full h-full nav-logo"
                src="@assets/servers/logosmalltransparent.png">
         </a>
@@ -70,7 +66,6 @@
 .sidebar {
   width: 72px;
   padding-top: 12px;
-  background: #202225;
 }
 
 .nav-item {
@@ -81,11 +76,13 @@
 .nav-item-bar {
   width: 4px;
   height: 40px;
+  @apply dark:bg-gray-50 bg-purple-400 absolute left-0 rounded-tr-2xl rounded-br-2xl;
 }
 
 .nav-item-notification-indicator {
   width: 4px;
   height: 8px;
+  @apply dark:bg-gray-50 bg-purple-400 absolute left-0 rounded-tr-2xl rounded-br-2xl;
 }
 
 .content-separator {
