@@ -7,11 +7,12 @@
 
     <!--    top nav-->
     <template v-slot:topNav>
+      <slot name="topNav"></slot>
     </template>
 
     <!--    content-->
     <div class="">
-      <router-view></router-view>
+      <slot></slot>
     </div>
 
   </MainLayout>
