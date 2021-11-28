@@ -12,17 +12,19 @@
       <ul class="mt-2 sidemenu-px-10">
         <!--    friends-->
         <li class="sidemenu-items flex items-center">
-          <router-link :to="{ name: 'Friends'}" class="sidemenu-item-active sidemenu-item">
-            <FriendsIcon class="mr-4" />
+          <router-link :to="{ name: 'Friends'}" class="sidemenu-item"
+          :class="{ 'sidemenu-item-active' : route.name === 'Friends'}">
+            <FriendsIcon class="mr-4"/>
             <span class="font-medium">Friends</span>
           </router-link>
         </li>
         <!--    nitro-->
         <li class="sidemenu-items flex items-center">
-          <a class="sidemenu-item" href="#">
-            <NitroIcon class="mr-4" />
+          <router-link :to="{ name: 'Nitro'}" class="sidemenu-item"
+                       :class="{ 'sidemenu-item-active' : route.name === 'Nitro'}">
+            <NitroIcon class="mr-4"/>
             <span class="font-medium">Nitro</span>
-          </a>
+          </router-link>
         </li>
       </ul>
 
@@ -46,8 +48,10 @@
           </span>
           </div>
           <div>
-            <span class="text-sm block text-gray-400 font-medium menu-item-title group-hover:text-gray-500 dark:group-hover:text-gray-200">Tailwind</span>
-            <small class="text-xs block text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-100">In the mood for a hug</small>
+            <span
+                class="text-sm block text-gray-400 font-medium menu-item-title group-hover:text-gray-500 dark:group-hover:text-gray-200">Tailwind</span>
+            <small class="text-xs block text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-100">In the
+              mood for a hug</small>
           </div>
           <span class="group-hover:block hidden hover:text-gray-200 absolute right-0 text-gray-400 mr-1">
           <CloseIcon class="icon-16"/>
@@ -66,7 +70,8 @@
           </span>
           </div>
           <div>
-            <span class="text-sm text-gray-400 font-medium menu-item-title group-hover:text-gray-500 dark:group-hover:text-gray-200">CedricPotato</span>
+            <span
+                class="text-sm text-gray-400 font-medium menu-item-title group-hover:text-gray-500 dark:group-hover:text-gray-200">CedricPotato</span>
           </div>
           <span class="group-hover:block hidden hover:text-gray-200 absolute right-0 text-gray-400 mr-1">
           <CloseIcon class="icon-16"/>
@@ -85,7 +90,8 @@
           </span>
           </div>
           <div>
-            <span class="text-sm text-gray-400 font-medium menu-item-title group-hover:text-gray-500 dark:group-hover:text-gray-200">iam.tony</span>
+            <span
+                class="text-sm text-gray-400 font-medium menu-item-title group-hover:text-gray-500 dark:group-hover:text-gray-200">iam.tony</span>
           </div>
           <span class="group-hover:block hidden hover:text-gray-200 absolute right-0 text-gray-400 mr-1">
           <CloseIcon class="icon-16"/>
@@ -105,7 +111,8 @@
           </span>
           </div>
           <div>
-            <span class="text-sm text-gray-400 font-medium menu-item-title group-hover:text-gray-500 block dark:group-hover:text-gray-100">Nova.</span>
+            <span
+                class="text-sm text-gray-400 font-medium menu-item-title group-hover:text-gray-500 block dark:group-hover:text-gray-100">Nova.</span>
             <small class="text-xs block text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-100">https://irup.io</small>
           </div>
           <span class="group-hover:block hidden hover:text-gray-200 absolute right-0 text-gray-400 mr-1">
@@ -148,6 +155,9 @@ import FriendsIcon from "@/app/common/components/icons/FriendsIcon.vue";
 import NitroIcon from "@/app/common/components/icons/NitroIcon.vue";
 import PlusIcon from "@/app/common/components/icons/PlusIcon.vue";
 import CloseIcon from "@/app/common/components/icons/CloseIcon.vue";
+import {useRoute} from "vue-router";
+
+const route = useRoute();
 
 </script>
 
@@ -203,8 +213,9 @@ import CloseIcon from "@/app/common/components/icons/CloseIcon.vue";
 .profile-name {
   line-height: 3px !important;
 }
+
 .menu-item-title {
-  line-height: 10px!important;
+  line-height: 10px !important;
 }
 
 .profile-hash {
