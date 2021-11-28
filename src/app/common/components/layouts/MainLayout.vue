@@ -9,15 +9,21 @@
     <!-- side menu-->
     <!-- -------------------------------------------------------------------------------------------------------------->
     <div>
-      <SideMenu></SideMenu>
       <!-- styling for side menu-->
-      <slot name="sideMenu"></slot>
+      <slot name="sideMenu">
+        <SideMenu></SideMenu>
+      </slot>
     </div>
 
     <!-- -------------------------------------------------------------------------------------------------------------->
     <!-- main content-->
     <!-- -------------------------------------------------------------------------------------------------------------->
     <div class="main-content dark:bg-discord-black-300 min-h-screen bg-gray-50">
+      <div class="w-full shadow" style="height: 48px">
+        <slot name="topNav">
+        </slot>
+      </div>
+
       <slot></slot>
     </div>
 

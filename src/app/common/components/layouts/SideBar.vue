@@ -1,7 +1,9 @@
 <template>
   <nav class="min-h-screen absolute sidebar dark:bg-discord-black-600 bg-gray-100">
-    <ul class="">
-      <!--      Home-->
+    <ul>
+      <!-- ------------------------------------------------------------------------------------------------ -->
+      <!-- Home -->
+      <!-- ------------------------------------------------------------------------------------------------ -->
       <li class="flex justify-center relative items-center">
         <span class="nav-item-bar"></span>
         <a class="bg-gray-50 flex justify-center items-center nav-item rounded-2xl
@@ -9,51 +11,21 @@
           <img alt="discord logo" class="main-nav-logo" src="@assets/discord-logo.png">
         </a>
       </li>
+
       <!--      separator-->
       <li class="flex justify-center my-2">
         <span class="content-separator bg-gray-700"></span>
       </li>
+
       <!-- ------------------------------------------------------------------------------------------------ -->
       <!-- Servers -->
       <!-- ------------------------------------------------------------------------------------------------ -->
-      <!--      server 1-->
-      <li class="flex justify-center relative items-center group mb-2">
-        <span class="nav-item-bar"></span>
+      <li v-for="server in servers" :key="server.name" class="flex justify-center relative items-center group mb-2">
+        <span class="nav-item-bar" v-if="server.active"></span>
+        <span class="nav-item-notification-indicator" v-if="server.notification"></span>
         <a class="nav-link nav-item" href="#">
           <img alt="laravel logo" class="object-cover w-full h-full nav-logo"
-               src="@assets/servers/laravel.png">
-        </a>
-      </li>
-      <!--      server 2-->
-      <li class="flex justify-center relative items-center group mb-2">
-        <span class="nav-item-notification-indicator"></span>
-        <a class="nav-link nav-item" href="#">
-          <img alt="tailwind logo" class="object-cover w-full h-full nav-logo"
-               src="@assets/servers/tailwind.png">
-        </a>
-      </li>
-      <!--      server 3-->
-      <li class="flex justify-center relative items-center group mb-2">
-        <span class="nav-item-notification-indicator"></span>
-        <a class="nav-link nav-item" href="#">
-          <img alt="arch tech logo" class="object-cover w-full h-full nav-logo"
-               src="@assets/servers/archtech.png">
-        </a>
-      </li>
-      <!--      server 4-->
-      <li class="flex justify-center relative items-center group mb-2">
-        <span class="nav-item-notification-indicator"></span>
-        <a class="nav-link nav-item" href="#">
-          <img alt="apex legends logo" class="object-cover w-full h-full nav-logo"
-               src="@assets/servers/apexlegends.png">
-        </a>
-      </li>
-      <!--      server 5-->
-      <li class="flex justify-center relative items-center group mb-2">
-        <span class="nav-item-notification-indicator"></span>
-        <a class="nav-link nav-item" href="#">
-          <img alt="irup io logo" class="object-cover w-full h-full nav-logo"
-               src="@assets/servers/logosmalltransparent.png">
+               :src="server.image">
         </a>
       </li>
     </ul>
@@ -61,6 +33,7 @@
 
 </template>
 <script lang="ts" setup>
+import servers from '@/app/common/data/servers.json'
 </script>
 <style>
 .sidebar {

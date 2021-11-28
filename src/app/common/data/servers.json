@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Laravel",
+    "image": "/images/servers/laravel.png",
+    "active": true
+  },
+  {
+    "name": "Tailwind",
+    "image": "/images/servers/tailwind.png",
+    "notification":true
+  },
+  {
+    "name": "Arch tech",
+    "image": "/images/servers/archtech.png",
+    "notification": true
+  },
+  {
+    "name": "Apex Legends",
+    "image": "/images/servers/apexlegends.png"
+  },
+  {
+    "name": "Irup",
+    "image": "/images/servers/logosmalltransparent.png",
+    "notification": true
+  },
+  {
+    "name": "Tenancy",
+    "image": "/images/servers/tenancy.png"
+  },
+  {
+    "name": "GitNation Tech Communities",
+    "image": "/images/servers/gitnation.png",
+    "notification": true
+  },
+  {
+    "name": "Academind",
+    "image": "/images/servers/academind.png"
+  }
+]
