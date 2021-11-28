@@ -10,9 +10,7 @@
     <!-- -------------------------------------------------------------------------------------------------------------->
     <div>
       <!-- styling for side menu-->
-      <slot name="sideMenu">
-        <SideMenu></SideMenu>
-      </slot>
+      <slot name="sideMenu"></slot>
     </div>
 
     <!-- -------------------------------------------------------------------------------------------------------------->
@@ -35,8 +33,7 @@
               class="flex items-center text-xl relative border p-2 dark:border-gray-500
             bg-gray-50 dark:bg-discord-black-500
             border-purple-200 rounded-full text-primary dark:text-gray-300 font-medium">
-        <LightBulbIconSolid v-if="darkMode" class="h-9"/>
-        <LightBulbIconOutline v-else class="h-9"/>
+        <BulbIcon class="h-9"/>
         <!--      Turn {{ darkMode ? 'on' : 'off' }} the lights-->
         <span class="flex h-4 w-4 absolute top-0 -right-1">
         <span
@@ -44,7 +41,7 @@
             :class="[animate ? 'animate-ping' :'']"></span>
         <span class="h-4 w-4 dark:bg-gray-300 bg-purple-400 rounded-full"></span>
       </span>
-        <small class="hidden group-hover:block">Turn {{ darkMode ? 'on' : 'off' }} the lights 😀</small>
+        <small class="hidden group-hover:block">Turn {{ darkMode ? 'on' : 'off' }} the lights 💡</small>
       </button>
     </div>
 
@@ -53,11 +50,9 @@
 
 <script lang="ts" setup>
 import SideBar from "@/app/common/components/layouts/SideBar.vue";
-import SideMenu from "@/app/common/components/layouts/SideMenu.vue";
 
-import {LightBulbIcon as LightBulbIconOutline} from '@heroicons/vue/outline';
-import {LightBulbIcon as LightBulbIconSolid} from '@heroicons/vue/solid';
 import {ref} from "vue";
+import BulbIcon from "@/app/common/components/icons/BulbIcon.vue";
 
 // window.matchMedia('(prefers-color-scheme: dark)').matches
 let darkMode = ref<boolean>(true);

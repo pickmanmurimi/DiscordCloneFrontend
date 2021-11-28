@@ -1,11 +1,21 @@
 export default [
     {
         path: '/',
-        component: () => import('../views/Home.vue'),
-        name: 'Home',
+        alias: '/@me/friends',
+        component: () => import('../views/Friends.vue'),
+        name: 'Friends',
         meta: {
             requiresAuth: false,
-            title: 'Home',
+            title: 'Friends',
         },
     },
+    {
+        path: '/@me/store',
+        component: () => import('../views/Nitro.vue'),
+        name: 'Nitro',
+        meta: {
+            requiresAuth: false,
+            title: 'Nitro',
+        },
+    }
 ];

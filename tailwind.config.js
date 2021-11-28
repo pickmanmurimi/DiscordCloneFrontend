@@ -21,7 +21,7 @@ module.exports = {
     },
     variants: {
         extend: {
-            borderRadius: ['group-hover'],
+            borderRadius: ['group-hover', 'dark'],
             display: ['group-hover'],
             borderWidth: ['hover', 'group-hover']
         },
