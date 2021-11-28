@@ -46,8 +46,8 @@
           </span>
           </div>
           <div>
-            <span class="text-sm block text-gray-400 font-medium menu-item-title group-hover:text-gray-200">Tailwind</span>
-            <small class="text-xs block text-gray-400 group-hover:text-gray-100">In the mood for a hug</small>
+            <span class="text-sm block text-gray-400 font-medium menu-item-title group-hover:text-gray-500 dark:group-hover:text-gray-200">Tailwind</span>
+            <small class="text-xs block text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-100">In the mood for a hug</small>
           </div>
           <span class="group-hover:block hidden hover:text-gray-200 absolute right-0 text-gray-400 mr-1">
           <XIcon class="icon-16"/>
@@ -66,7 +66,7 @@
           </span>
           </div>
           <div>
-            <span class="text-sm text-gray-400 font-medium menu-item-title group-hover:text-gray-200">CedricPotato</span>
+            <span class="text-sm text-gray-400 font-medium menu-item-title group-hover:text-gray-500 dark:group-hover:text-gray-200">CedricPotato</span>
           </div>
           <span class="group-hover:block hidden hover:text-gray-200 absolute right-0 text-gray-400 mr-1">
           <XIcon class="icon-16"/>
@@ -85,7 +85,7 @@
           </span>
           </div>
           <div>
-            <span class="text-sm text-gray-400 font-medium menu-item-title group-hover:text-gray-200">iam.tony</span>
+            <span class="text-sm text-gray-400 font-medium menu-item-title group-hover:text-gray-500 dark:group-hover:text-gray-200">iam.tony</span>
           </div>
           <span class="group-hover:block hidden hover:text-gray-200 absolute right-0 text-gray-400 mr-1">
           <XIcon class="icon-16"/>
@@ -105,8 +105,8 @@
           </span>
           </div>
           <div>
-            <span class="text-sm text-gray-400 font-medium menu-item-title block group-hover:text-gray-100">Nova.</span>
-            <small class="text-xs block text-gray-400 group-hover:text-gray-100">https://irup.io</small>
+            <span class="text-sm text-gray-400 font-medium menu-item-title group-hover:text-gray-500 block dark:group-hover:text-gray-100">Nova.</span>
+            <small class="text-xs block text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-100">https://irup.io</small>
           </div>
           <span class="group-hover:block hidden hover:text-gray-200 absolute right-0 text-gray-400 mr-1">
           <XIcon class="icon-16"/>
