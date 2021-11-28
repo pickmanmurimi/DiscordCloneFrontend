@@ -1,9 +1,20 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-  <div class="flex justify-center items-center h-full w-full">
-    <img alt="Discord logo" class="animate-pulse" src="@assets/discord-logo.png" />
-  </div>
+  <router-view v-slot="{ Component }">
+    <transition mode="out-in" name="scale">
+      <component :is="Component"/>
+    </transition>
+  </router-view>
 </template>
+
+<style>
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.2s ease;
+}
+
+.scale-enter-from,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
+</style>
