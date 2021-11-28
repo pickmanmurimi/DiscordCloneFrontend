@@ -50,7 +50,6 @@
 
 <script lang="ts" setup>
 import SideBar from "@/app/common/components/layouts/SideBar.vue";
-import SideMenu from "@/app/common/components/layouts/SideMenu.vue";
 
 import {ref} from "vue";
 import BulbIcon from "@/app/common/components/icons/BulbIcon.vue";
