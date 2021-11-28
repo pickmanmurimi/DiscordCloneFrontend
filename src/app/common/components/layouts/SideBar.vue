@@ -1,5 +1,5 @@
 <template>
-  <nav class="min-h-screen absolute sidebar dark:bg-discord-black-500 bg-gray-100">
+  <nav class="min-h-screen absolute sidebar dark:bg-discord-black-600 bg-gray-100">
     <ul class="">
       <!--      Home-->
       <li class="flex justify-center relative items-center">
