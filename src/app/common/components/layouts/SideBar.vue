@@ -14,7 +14,7 @@
 
       <!--      separator-->
       <li class="flex justify-center my-2">
-        <span class="content-separator bg-gray-700"></span>
+        <span class="content-separator dark:bg-gray-700 bg-gray-300"></span>
       </li>
 
       <!-- ------------------------------------------------------------------------------------------------ -->
