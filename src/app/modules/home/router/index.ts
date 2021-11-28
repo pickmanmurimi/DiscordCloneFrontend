@@ -1,8 +1,9 @@
 export default [
     {
-        path: '/@me',
+        path: '/',
         component: () => import('../views/Home.vue'),
         name: 'Home',
+        redirect: { name: 'Friends'},
         meta: {
             requiresAuth: false,
             title: 'Home',
