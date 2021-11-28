@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Tailwind",
+    "image": "/images/servers/tailwind.png",
+    "tagline": "In the mood for a hug",
+    "online": true,
+    "notification": true
+  },
+  {
+    "name": "Nova",
+    "tagline": "https://irup.io",
+    "image": "/images/servers/logosmalltransparent.png",
+    "online": true
+  },
+  {
+    "name": "iam.tony",
+    "image": "/images/placeholders/icons8-discord-50.png",
+    "online": false
+  },
+  {
+    "name": "CedricPotato",
+    "image": "/images/placeholders/discord-logo.png",
+    "online": true,
+    "notification": true
+  }
+]
