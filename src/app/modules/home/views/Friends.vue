@@ -4,7 +4,7 @@
       <div class="flex items-center h-full">
         <div class="flex items-center border-r pr-4 border-gray-600">
           <FriendsIcon class="ml-4 mr-2 text-gray-500" />
-          <span class="font-medium text-white">Friends</span>
+          <span class="font-medium dark:text-white text-gray-500">Friends</span>
         </div>
       </div>
     </template>
