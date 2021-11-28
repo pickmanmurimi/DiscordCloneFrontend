@@ -13,14 +13,14 @@
         <!--    friends-->
         <li class="sidemenu-items flex items-center">
           <a class="sidemenu-item-active sidemenu-item" href="#">
-            <UsersIcon class="pr-4 icon-24"/>
+            <Friends class="mr-4" />
             <span class="font-medium">Friends</span>
           </a>
         </li>
         <!--    nitro-->
         <li class="sidemenu-items flex items-center">
           <a class="sidemenu-item" href="#">
-            <CubeTransparentIcon class="pr-4 icon-24"/>
+            <Nitro class="mr-4" />
             <span class="font-medium">Nitro</span>
           </a>
         </li>
@@ -35,7 +35,7 @@
       <!--    messages-->
       <ul class="pl-3 pr-3 mt-3">
         <!--      message 1-->
-        <li class="flex mb-4 items-center dark:hover:bg-discord-black-200 hover:bg-gray-100
+        <li class="flex mb-0.5 items-center dark:hover:bg-discord-black-200 hover:bg-gray-100
        p-1 rounded cursor-pointer group relative">
           <div class="mr-3 relative">
             <img alt="irup io logo" class="object-cover w-full h-full dm-thumbnail rounded-full
@@ -46,8 +46,8 @@
           </span>
           </div>
           <div>
-            <span class="text-sm block text-gray-400 font-medium">Tailwind</span>
-            <small class="text-xs block text-gray-400">In the mood for a hug</small>
+            <span class="text-sm block text-gray-400 font-medium menu-item-title group-hover:text-gray-200">Tailwind</span>
+            <small class="text-xs block text-gray-400 group-hover:text-gray-100">In the mood for a hug</small>
           </div>
           <span class="group-hover:block hidden hover:text-gray-200 absolute right-0 text-gray-400 mr-1">
           <XIcon class="icon-16"/>
@@ -55,7 +55,7 @@
         </li>
 
         <!--      message 2-->
-        <li class="flex mb-4 items-center dark:hover:bg-discord-black-200 hover:bg-gray-100
+        <li class="flex mb-0.5 items-center dark:hover:bg-discord-black-200 hover:bg-gray-100
        p-1 rounded cursor-pointer group relative">
           <div class="mr-3 relative">
             <img alt="irup io logo" class="object-cover w-full h-full dm-thumbnail rounded-full bg-gray-50
@@ -66,15 +66,15 @@
           </span>
           </div>
           <div>
-            <span class="text-sm text-gray-400 font-medium">CedricPotato</span>
+            <span class="text-sm text-gray-400 font-medium menu-item-title group-hover:text-gray-200">CedricPotato</span>
           </div>
           <span class="group-hover:block hidden hover:text-gray-200 absolute right-0 text-gray-400 mr-1">
           <XIcon class="icon-16"/>
         </span>
         </li>
 
-        <!--      message 2-->
-        <li class="flex mb-4 items-center dark:hover:bg-discord-black-200 hover:bg-gray-100
+        <!--      message 3-->
+        <li class="flex mb-0.5 items-center dark:hover:bg-discord-black-200 hover:bg-gray-100
        p-1 rounded cursor-pointer group relative">
           <div class="mr-3 relative">
             <img alt="irup io logo" class="object-cover w-full h-full dm-thumbnail rounded-full bg-gray-50
@@ -85,7 +85,28 @@
           </span>
           </div>
           <div>
-            <span class="text-sm text-gray-400 font-medium">iam.tony</span>
+            <span class="text-sm text-gray-400 font-medium menu-item-title group-hover:text-gray-200">iam.tony</span>
+          </div>
+          <span class="group-hover:block hidden hover:text-gray-200 absolute right-0 text-gray-400 mr-1">
+          <XIcon class="icon-16"/>
+        </span>
+        </li>
+
+
+        <!--      message 4-->
+        <li class="flex mb-0.5 items-center dark:hover:bg-discord-black-200 hover:bg-gray-100
+       p-1 rounded cursor-pointer group relative">
+          <div class="mr-3 relative">
+            <img alt="irup io logo" class="object-cover w-full h-full dm-thumbnail rounded-full bg-gray-50
+          border border-gray-300 group-hover:border-0"
+                 src="@assets/placeholders/logosmalltransparent.png">
+            <span class="absolute status-indicator-wrapper bg-discord-black-400 rounded-full">
+            <span class="status-indicator bg-green-400 rounded-full"></span>
+          </span>
+          </div>
+          <div>
+            <span class="text-sm text-gray-400 font-medium menu-item-title block group-hover:text-gray-100">Nova.</span>
+            <small class="text-xs block text-gray-400 group-hover:text-gray-100">https://irup.io</small>
           </div>
           <span class="group-hover:block hidden hover:text-gray-200 absolute right-0 text-gray-400 mr-1">
           <XIcon class="icon-16"/>
@@ -127,6 +148,8 @@ import {UsersIcon} from '@heroicons/vue/solid'
 import {CubeTransparentIcon} from '@heroicons/vue/solid'
 import {PlusIcon} from '@heroicons/vue/solid'
 import {XIcon} from '@heroicons/vue/solid'
+import Friends from "@/app/common/components/icons/Friends.vue";
+import Nitro from "@/app/common/components/icons/Nitro.vue";
 
 </script>
 
@@ -181,6 +204,9 @@ import {XIcon} from '@heroicons/vue/solid'
 
 .profile-name {
   line-height: 3px !important;
+}
+.menu-item-title {
+  line-height: 10px!important;
 }
 
 .profile-hash {
