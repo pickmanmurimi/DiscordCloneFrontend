@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-sm {
+    font-size: 12px !important;
+}
+
+.searchbar-btn {
+    @apply rounded bg-gray-900 text-gray-500 text-sm w-full text-left p-1;
+}

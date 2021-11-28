@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-gray-800 min-h-screen absolute sidebar">
+  <nav class="min-h-screen absolute sidebar">
     <ul class="">
       <!--      Home-->
       <li class="flex justify-center relative items-center">
@@ -51,6 +51,15 @@
                src="@assets/servers/apexlegends.png">
         </a>
       </li>
+      <!--      server 5-->
+      <li class="flex justify-center relative items-center group mb-2">
+        <span class="nav-item-notification-indicator bg-gray-50 absolute left-0 rounded-tr-2xl rounded-br-2xl"></span>
+        <a class="bg-gray-50 flex justify-center items-center
+        nav-item rounded-full group-hover:rounded-2xl overflow-hidden" href="#">
+          <img alt="irup io logo" class="object-cover w-full h-full nav-logo"
+               src="@assets/servers/logosmalltransparent.png">
+        </a>
+      </li>
     </ul>
   </nav>
 
@@ -61,6 +70,7 @@
 .sidebar {
   width: 72px;
   padding-top: 12px;
+  background: #202225;
 }
 
 .nav-item {

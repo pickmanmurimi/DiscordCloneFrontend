@@ -9,6 +9,7 @@
     <!-- side menu-->
     <!-- -------------------------------------------------------------------------------------------------------------->
     <div>
+      <SideMenu></SideMenu>
       <!-- styling for side menu-->
       <slot name="sideMenu"></slot>
     </div>
@@ -25,11 +26,12 @@
 
 <script lang="ts" setup>
 import SideBar from "@/app/common/components/layouts/SideBar.vue";
+import SideMenu from "@/app/common/components/layouts/SideMenu.vue";
 
 </script>
 
 <style>
 .main-content {
-  margin-left: 72px;
+  margin-left: 312px;
 }
 </style>
