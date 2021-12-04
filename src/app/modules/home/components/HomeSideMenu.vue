@@ -119,7 +119,7 @@ const route = useRoute();
 
 </script>
 
-<style>
+<style scoped>
 .sidemenu {
   width: 240px;
   margin-left: 72px;
@@ -153,23 +153,8 @@ const route = useRoute();
 }
 
 .dm-thumbnail {
-  height: 32px;
-  width: 32px;
-}
-
-.status-indicator-wrapper {
-  width: 14px;
-  height: 14px;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.status-indicator {
-  width: 9px;
-  height: 9px;
+  height: 35px !important;
+  width: 35px !important;
 }
 
 .profile-name {
