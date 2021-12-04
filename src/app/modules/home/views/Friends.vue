@@ -19,71 +19,79 @@
       </div>
     </template>
 
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-    <!-- Friends lists -->
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-    <div class="p-5 px-8">
-      <small class="dark:text-gray-400 font-bold uppercase">
-        Online — <span class="text-xs">9</span>
-      </small>
-      <ul class="mt-2">
-        <li class="friend-list-item">
-          <div
-              class="border-t border-gray-300 dark:border-discord-black-100 border-opacity-30
+    <div class="grid grid-cols-4">
+      <!-- ----------------------------------------------------------------------------------------------------------- -->
+      <!-- Friends lists -->
+      <!-- ----------------------------------------------------------------------------------------------------------- -->
+      <div class="p-5 px-8 col-span-3 border-r dark:border-gray-700 min-h-screen">
+        <small class="dark:text-gray-400 font-bold uppercase">
+          Online — <span class="text-xs">9</span>
+        </small>
+        <ul class="mt-2">
+          <li class="friend-list-item">
+            <div
+                class="border-t border-gray-300 dark:border-gray-700
               w-full flex items-center justify-between friend-list-item-height">
-            <!--            profile-->
-            <div class="flex items-center">
-              <ProfileImage/>
-              <div class="ml-2">
-                <span class="font-bold text-gray-400 dark:text-gray-200 profile-name block">FriedMudkip</span>
-                <small class="font-medium block text-gray-400 dark:text-gray-400">FriedMudkip</small>
+              <!--            profile-->
+              <div class="flex items-center">
+                <ProfileImage/>
+                <div class="ml-2">
+                  <span class="font-bold text-gray-400 dark:text-gray-200 profile-name block">FriedMudkip</span>
+                  <small class="font-medium block text-gray-400 dark:text-gray-400">FriedMudkip</small>
+                </div>
+              </div>
+              <!--            actions-->
+              <div class="flex items-center space-x-2">
+                <button
+                    class="action-icons btn-icons">
+                  <MessageIcon/>
+                </button>
+                <button
+                    class="action-icons btn-icons">
+                  <DotsIcon/>
+                </button>
+              </div>
+
+            </div>
+
+          </li>
+          <li class="friend-list-item">
+            <div
+                class="border-t border-gray-300 dark:border-gray-700 border-opacity-30 w-full flex items-center justify-between friend-list-item-height">
+              <!--            profile-->
+              <div class="flex items-center">
+                <ProfileImage/>
+                <div class="ml-2">
+                  <span class="font-bold text-gray-400 text-gray-200 profile-name block">Lorem</span>
+                  <small class="font-medium block text-gray-400 text-gray-400">Lorem</small>
+
+                </div>
+              </div>
+
+              <!--            actions-->
+              <div class="flex items-center space-x-2">
+                <button
+                    class="action-icons btn-icons">
+                  <MessageIcon/>
+                </button>
+                <button
+                    class="action-icons btn-icons">
+                  <DotsIcon/>
+                </button>
               </div>
             </div>
-            <!--            actions-->
-            <div class="flex items-center space-x-2">
-              <button
-                  class="action-icons btn-icons">
-                <MessageIcon/>
-              </button>
-              <button
-                  class="action-icons btn-icons">
-                <DotsIcon/>
-              </button>
-            </div>
 
-          </div>
+          </li>
+        </ul>
 
-        </li>
-        <li class="friend-list-item">
-          <div
-              class="border-t border-gray-300 dark:border-discord-black-100 border-opacity-30 w-full flex items-center justify-between friend-list-item-height">
-            <!--            profile-->
-            <div class="flex items-center">
-              <ProfileImage/>
-              <div class="ml-2">
-                <span class="font-bold text-gray-400 text-gray-200 profile-name block">Lorem</span>
-                <small class="font-medium block text-gray-400 text-gray-400">Lorem</small>
+      </div>
 
-              </div>
-            </div>
-
-            <!--            actions-->
-            <div class="flex items-center space-x-2">
-              <button
-                  class="action-icons btn-icons">
-                <MessageIcon/>
-              </button>
-              <button
-                  class="action-icons btn-icons">
-                <DotsIcon/>
-              </button>
-            </div>
-          </div>
-
-        </li>
-      </ul>
-
+      <!-- ----------------------------------------------------------------------------------------------------------- -->
+      <!-- Active list -->
+      <!-- ----------------------------------------------------------------------------------------------------------- -->
+      <div class="p-5 px-8"></div>
     </div>
+
   </HomeLayout>
 
 </template>
@@ -106,7 +114,7 @@ import DotsIcon from "@/app/common/components/icons/DotsIcon.vue";
 }
 
 .friend-list-item {
-  @apply px-2 flex items-center justify-between rounded-xl dark:hover:bg-discord-black-100 hover:bg-gray-300;
+  @apply px-3 flex items-center justify-between rounded-xl dark:hover:bg-gray-700 hover:bg-gray-300;
   @apply bg-opacity-30 !important
 }
 
