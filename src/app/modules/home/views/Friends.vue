@@ -28,16 +28,16 @@
           Online — <span class="text-xs">9</span>
         </small>
         <ul class="mt-2">
-          <li class="friend-list-item">
+          <li class="friend-list-item" v-for="friend in friends" :key="friend">
             <div
                 class="border-t border-gray-300 dark:border-gray-700
               w-full flex items-center justify-between friend-list-item-height">
               <!--            profile-->
               <div class="flex items-center">
-                <ProfileImage/>
+                <ProfileImage :image="friend.image"/>
                 <div class="ml-2">
-                  <span class="font-bold text-gray-400 dark:text-gray-200 profile-name block">FriedMudkip</span>
-                  <small class="font-medium block text-gray-400 dark:text-gray-400">FriedMudkip</small>
+                  <span class="font-bold text-gray-400 dark:text-gray-200 profile-name block">{{ friend.name }}</span>
+                  <small class="block text-gray-400 dark:text-gray-400 font-semibold">{{ friend.tagline }}</small>
                 </div>
               </div>
               <!--            actions-->
@@ -52,33 +52,6 @@
                 </button>
               </div>
 
-            </div>
-
-          </li>
-          <li class="friend-list-item">
-            <div
-                class="border-t border-gray-300 dark:border-gray-700 border-opacity-30 w-full flex items-center justify-between friend-list-item-height">
-              <!--            profile-->
-              <div class="flex items-center">
-                <ProfileImage/>
-                <div class="ml-2">
-                  <span class="font-bold text-gray-400 text-gray-200 profile-name block">Lorem</span>
-                  <small class="font-medium block text-gray-400 text-gray-400">Lorem</small>
-
-                </div>
-              </div>
-
-              <!--            actions-->
-              <div class="flex items-center space-x-2">
-                <button
-                    class="action-icons btn-icons">
-                  <MessageIcon/>
-                </button>
-                <button
-                    class="action-icons btn-icons">
-                  <DotsIcon/>
-                </button>
-              </div>
             </div>
 
           </li>
@@ -102,6 +75,7 @@ import FriendsIcon from "@/app/common/components/icons/FriendsIcon.vue";
 import ProfileImage from "@/app/common/components/images/ProfileImage.vue";
 import MessageIcon from "@/app/common/components/icons/MessageIcon.vue";
 import DotsIcon from "@/app/common/components/icons/DotsIcon.vue";
+import friends from "@/app/common/data/friends.json";
 </script>
 
 <style scoped>
@@ -119,7 +93,7 @@ import DotsIcon from "@/app/common/components/icons/DotsIcon.vue";
 }
 
 .profile-name {
-  line-height: 8px !important;
+  line-height: 10px !important;
 }
 
 .friend-list-item-height {

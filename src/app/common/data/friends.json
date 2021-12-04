@@ -1,0 +1,56 @@
+[
+  {
+    "name": "A010101010001",
+    "image": "/images/servers/tailwind.png",
+    "tagline": "In the mood for a hug",
+    "online": true,
+    "notification": true
+  },
+  {
+    "name": "bstone99",
+    "tagline": "https://irup.io",
+    "image": "/images/servers/logosmalltransparent.png",
+    "online": true
+  },
+  {
+    "name": "iam.tony",
+    "image": "/images/placeholders/icons8-discord-50.png",
+    "online": false,
+    "tagline": "To control the gap at a specific breakpoint."
+  },
+  {
+    "name": "consenual_Death",
+    "image": "/images/placeholders/discord-logo.png",
+    "online": true,
+    "notification": true,
+    "tagline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "name": "Luke.",
+    "image": "/images/placeholders/luke.png",
+    "online": true,
+    "notification": true,
+    "tagline": "consectetur adipiscing elit."
+  },
+  {
+    "name": "VortexBeats",
+    "image": "/images/placeholders/vortexbeats.png",
+    "online": true,
+    "notification": true,
+    "tagline": "proident, sunt in culpa qui."
+  },
+  {
+    "name": "MANGO",
+    "image": "/images/placeholders/vortexbeats.png",
+    "online": true,
+    "notification": true,
+    "tagline": "dolor in reprehenderit in voluptate."
+  },
+  {
+    "name": "Bumblebee",
+    "image": "/images/placeholders/bumblebee.png",
+    "online": true,
+    "notification": true,
+    "tagline": "eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  }
+]
