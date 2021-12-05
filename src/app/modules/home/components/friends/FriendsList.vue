@@ -4,16 +4,16 @@
       {{ tab }} — <span class="text-xs">9</span>
     </small>
     <ul class="mt-2 overflow-y-auto">
-      <li class="friend-list-item" v-for="friend in friends" :key="friend">
+      <li class="friend-list-item" v-for="friend in friends" :key="friend.name">
         <div
             class="border-t border-gray-200 dark:border-gray-700
               w-full flex items-center justify-between friend-list-item-height">
           <!--            profile-->
           <div class="flex items-center">
-            <ProfileImage :image="friend.image"/>
+            <ProfileImage :image="friend?.image"/>
             <div class="ml-2">
-              <span class="font-semibold text-gray-600 dark:text-gray-200 profile-name block">{{ friend.name }}</span>
-              <small class="block text-gray-400 dark:text-discord-black-60 font-semibold">{{ friend.tagline }}</small>
+              <span class="font-semibold text-gray-600 dark:text-gray-200 profile-name block">{{ friend?.name }}</span>
+              <small class="block text-gray-400 dark:text-discord-black-60 font-semibold">{{ friend?.tagline }}</small>
             </div>
           </div>
           <!--            actions-->

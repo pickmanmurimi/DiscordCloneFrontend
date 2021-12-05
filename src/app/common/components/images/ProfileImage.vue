@@ -13,7 +13,8 @@
 <script lang="ts" setup>
 const props = defineProps({
   image: {
-    required: true
+    required: true,
+    type: String
   }
 });
 </script>
