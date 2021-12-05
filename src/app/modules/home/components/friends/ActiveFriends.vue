@@ -4,7 +4,7 @@
     <!-- --------------------------------------------------------------------------------------------------------- -->
     <!-- Friends activities -->
     <!-- --------------------------------------------------------------------------------------------------------- -->
-    <div class="p-4 mt-2 border rounded-xl bg-gray-200 dark:border-gray-700 dark:bg-discord-black-100">
+    <div class="p-4 mt-2 border rounded-xl bg-gray-200 dark:border-gray-700 dark:bg-discord-black-400">
       <!--    friends  -->
       <div class="flex space-x-2 w-full">
         <ProfileImage image="/images/servers/logosmalltransparent.png"/>
@@ -20,7 +20,7 @@
       </div>
 
       <!--      activity-->
-      <div class="bg-white flex space-x-2 p-4 mt-4 rounded-xl items-center dark:bg-gray-500">
+      <div class="bg-white flex space-x-2 p-4 mt-4 rounded-xl items-center dark:bg-discord-black-300">
         <div class="rounded overflow-hidden h-5 w-5">
           <img alt="apex" class="h-5 object-cover" src="/images/placeholders/apex.png">
         </div>
