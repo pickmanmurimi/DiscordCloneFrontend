@@ -17,5 +17,14 @@ export default [
             requiresAuth: false,
             title: 'Nitro',
         },
+    },
+    {
+        path: '/@me/channel/:channel',
+        component: () => import('../views/DirectMessage.vue'),
+        name: 'DirectMessage',
+        meta: {
+            requiresAuth: false,
+            title: 'DirectMessage',
+        },
     }
 ];
