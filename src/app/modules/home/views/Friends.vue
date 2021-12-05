@@ -23,7 +23,8 @@
       <!-- --------------------------------------------------------------------------------------------------------- -->
       <!-- Friends lists -->
       <!-- --------------------------------------------------------------------------------------------------------- -->
-      <div class="p-5 px-8 col-span-3 border-r dark:border-gray-700 min-h-screen">
+      <div class="p-5 px-8 col-span-3 border-r dark:border-gray-700 h-screen overflow-y-scroll
+      custom-scrollbar">
         <FriendsList />
       </div>
 

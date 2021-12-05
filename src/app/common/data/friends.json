@@ -87,5 +87,19 @@
     "online": true,
     "notification": true,
     "tagline": "eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "name": "mnm",
+    "image": "/images/placeholders/mnm.png",
+    "online": true,
+    "notification": true,
+    "tagline": "et dolore magna aliqua. Ut enim ad minim veniam."
+  },
+  {
+    "name": "watsonflakes",
+    "image": "/images/placeholders/watsonflakes.png",
+    "online": true,
+    "notification": true,
+    "tagline": "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   }
 ]

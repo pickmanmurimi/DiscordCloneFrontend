@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="">
     <small class="dark:text-gray-400 font-bold uppercase">
       Online — <span class="text-xs">9</span>
     </small>
-    <ul class="mt-2">
+    <ul class="mt-2 overflow-y-auto">
       <li class="friend-list-item" v-for="friend in friends" :key="friend">
         <div
             class="border-t border-gray-200 dark:border-gray-700
