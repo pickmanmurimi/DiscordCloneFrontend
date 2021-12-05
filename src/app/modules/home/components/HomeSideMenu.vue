@@ -23,8 +23,8 @@
           <router-link :class="{ 'bg-gradient-to-r from-indigo-500 to-blue-400' : route.name === 'Nitro'}"
                        :to="{ name: 'Nitro'}"
                        class="sidemenu-item">
-            <NitroIcon class="mr-4" :class="{'text-white' : route.name === 'Nitro'}"/>
-            <span class="font-medium" :class="{'text-white' : route.name === 'Nitro'}">Nitro</span>
+            <NitroIcon :class="{'text-white' : route.name === 'Nitro'}" class="mr-4"/>
+            <span :class="{'text-white' : route.name === 'Nitro'}" class="font-medium">Nitro</span>
           </router-link>
         </li>
       </ul>
@@ -41,7 +41,7 @@
         <li v-for="dm in DirectMessages" :key="dm.name" class="flex mb-0.5 items-center dark:hover:bg-discord-black-200 hover:bg-gray-100
        p-1 rounded cursor-pointer group relative">
           <div class="mr-3 relative">
-            <img :src="dm.image" :alt="dm.name"
+            <img :alt="dm.name" :src="dm.image"
                  class="object-cover w-full h-full dm-thumbnail
                  rounded-full border border-discord-black-300 group-hover:border-0">
             <span v-if="dm.online" class="absolute status-indicator-wrapper bg-discord-black-400 rounded-full">
@@ -67,14 +67,14 @@
     </div>
 
     <!--    user profile-->
-    <div class="py-2 px-3 dark:bg-discord-black-500 bg-gray-300">
-      <div class="flex items-center">
+    <div class="py-2 px-2 dark:bg-discord-black-500 bg-gray-300 profile flex items-center justify-between">
+        <!--        profile details-->
         <div class="mr-3 flex items-center">
           <!-- profile picture-->
           <div class="relative">
-            <img alt="irup io logo" class="object-cover w-full h-full dm-thumbnail rounded-full
-           border border-gray-300 group-hover:border-0"
-                 src="@assets/placeholders/tailwind.png">
+            <img alt="irup io logo" class="object-cover min-w-full min-h-full dm-thumbnail rounded-full
+           border border-gray-300 group-hover:border-0 bg-white"
+                 src="/images/placeholders/logosmalltransparent.png">
             <span class="absolute status-indicator-wrapper bg-discord-black-400 rounded-full">
               <span class="status-indicator bg-green-400 rounded-full"></span>
             </span>
@@ -82,11 +82,22 @@
 
           <!-- username -->
           <div class="ml-2">
-            <span class="font-bold text-xs dark:text-white block text-gray-600 profile-name">optimus_murimi</span>
+            <span class="font-bold text-xs dark:text-white block text-gray-600 profile-name">optimus_m...</span>
             <small class="text-xs dark:text-gray-400 text-gray-700 profile-hash">#8580</small>
           </div>
         </div>
 
+      <!--        actions-->
+      <div class="flex items-center dark:text-gray-400 text-gray-700 space-x-1">
+        <button class="dark:hover:bg-gray-700 hover:bg-gray-100 p-1 rounded">
+          <MicIcon/>
+        </button>
+        <button class="dark:hover:bg-gray-700 hover:bg-gray-100 p-1 rounded">
+          <HeadPhonesIcon/>
+        </button>
+        <button class="dark:hover:bg-gray-700 hover:bg-gray-100 p-1 rounded">
+          <GearsIcon/>
+        </button>
       </div>
     </div>
 
@@ -100,12 +111,15 @@ import PlusIcon from "@/app/common/components/icons/PlusIcon.vue";
 import CloseIcon from "@/app/common/components/icons/CloseIcon.vue";
 import {useRoute} from "vue-router";
 import DirectMessages from "@/app/common/data/directMessages.json"
+import MicIcon from "@/app/common/components/icons/MicIcon.vue";
+import HeadPhonesIcon from "@/app/common/components/icons/HeadPhonesIcon.vue";
+import GearsIcon from "@/app/common/components/icons/GearsIcon.vue";
 
 const route = useRoute();
 
 </script>
 
-<style>
+<style scoped>
 .sidemenu {
   width: 240px;
   margin-left: 72px;
@@ -126,6 +140,10 @@ const route = useRoute();
   padding-left: 10px;
 }
 
+.profile {
+  height: 52px;
+}
+
 .sidemenu-item {
   @apply w-full h-full rounded flex items-center px-2 text-gray-400;
 }
@@ -135,23 +153,8 @@ const route = useRoute();
 }
 
 .dm-thumbnail {
-  height: 32px;
-  width: 32px;
-}
-
-.status-indicator-wrapper {
-  width: 14px;
-  height: 14px;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.status-indicator {
-  width: 9px;
-  height: 9px;
+  height: 35px !important;
+  width: 35px !important;
 }
 
 .profile-name {
