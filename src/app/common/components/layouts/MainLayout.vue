@@ -56,6 +56,8 @@ import BulbIcon from "@/app/common/components/icons/BulbIcon.vue";
 
 // window.matchMedia('(prefers-color-scheme: dark)').matches
 
+if (localStorage.getItem('darkmode') === null) localStorage.setItem('darkmode', 'true')
+
 let darkMode = ref<boolean>(localStorage.getItem('darkmode') === 'true');
 // turn dark mode on if it is system enabled
 if (darkMode.value) document.documentElement.classList.add('dark')
