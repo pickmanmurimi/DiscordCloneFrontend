@@ -22,5 +22,7 @@ const props = defineProps({
 .image {
   height: 35px !important;
   width: 35px !important;
+  min-height: 35px !important;
+  min-width: 35px !important;
 }
 </style>

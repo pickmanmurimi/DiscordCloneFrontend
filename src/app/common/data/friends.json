@@ -9,7 +9,7 @@
   {
     "name": "bstone99",
     "tagline": "https://irup.io",
-    "image": "/images/servers/logosmalltransparent.png",
+    "image": "/images/placeholders/bstone.png",
     "online": true
   },
   {
@@ -41,7 +41,7 @@
   },
   {
     "name": "MANGO",
-    "image": "/images/placeholders/vortexbeats.png",
+    "image": "/images/placeholders/mango.png",
     "online": true,
     "notification": true,
     "tagline": "dolor in reprehenderit in voluptate."
@@ -49,6 +49,41 @@
   {
     "name": "Bumblebee",
     "image": "/images/placeholders/bumblebee.png",
+    "online": true,
+    "notification": true,
+    "tagline": "eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "name": "Cuz_i_Legit",
+    "image": "/images/placeholders/cuzilegit.png",
+    "online": true,
+    "notification": true,
+    "tagline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "name": "farms",
+    "image": "/images/placeholders/farms.png",
+    "online": true,
+    "notification": true,
+    "tagline": "consectetur adipiscing elit."
+  },
+  {
+    "name": "Johny0419",
+    "image": "/images/placeholders/johny.png",
+    "online": true,
+    "notification": true,
+    "tagline": "proident, sunt in culpa qui."
+  },
+  {
+    "name": "minin",
+    "image": "/images/placeholders/munin.png",
+    "online": true,
+    "notification": true,
+    "tagline": "dolor in reprehenderit in voluptate."
+  },
+  {
+    "name": "TempZツ",
+    "image": "/images/placeholders/tempz.png",
     "online": true,
     "notification": true,
     "tagline": "eiusmod tempor incididunt ut labore et dolore magna aliqua."
