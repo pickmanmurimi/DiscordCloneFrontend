@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .searchbar-btn {
-    @apply rounded dark:bg-discord-black-500 dark:text-gray-500 text-xs w-full text-left py-1 px-2 bg-gray-100 text-gray-400;
+    @apply rounded dark:bg-discord-black-600 dark:text-discord-black-60 text-xs w-full text-left py-1.5 px-2 bg-gray-100 text-gray-400;
 }
 
 .nav-link {
@@ -31,4 +31,42 @@
 .status-indicator {
     width: 9px;
     height: 9px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    min-height: 40px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply dark:bg-discord-black-700;
+    @apply bg-gray-500;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb, .custom-scrollbar::-webkit-scrollbar-track {
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb, .custom-scrollbar::-webkit-scrollbar-track {
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    border-radius: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    @apply dark:bg-discord-black-500;
+    @apply bg-gray-200;
+}
+
+.text-secondary {
+    color: #8e9292;
 }

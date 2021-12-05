@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <small class="dark:text-gray-400 font-bold uppercase">
-      Online — <span class="text-xs">9</span>
+  <div class="">
+    <small class="dark:text-gray-400 text-gray-600 font-bold uppercase">
+      {{ tab }} — <span class="text-xs">9</span>
     </small>
-    <ul class="mt-2">
+    <ul class="mt-2 overflow-y-auto">
       <li class="friend-list-item" v-for="friend in friends" :key="friend">
         <div
             class="border-t border-gray-200 dark:border-gray-700
@@ -13,7 +13,7 @@
             <ProfileImage :image="friend.image"/>
             <div class="ml-2">
               <span class="font-semibold text-gray-600 dark:text-gray-200 profile-name block">{{ friend.name }}</span>
-              <small class="block text-gray-400 dark:text-gray-400 font-semibold">{{ friend.tagline }}</small>
+              <small class="block text-gray-400 dark:text-discord-black-60 font-semibold">{{ friend.tagline }}</small>
             </div>
           </div>
           <!--            actions-->
@@ -38,6 +38,12 @@ import ProfileImage from "@/app/common/components/images/ProfileImage.vue";
 import MessageIcon from "@/app/common/components/icons/MessageIcon.vue";
 import DotsIcon from "@/app/common/components/icons/DotsIcon.vue";
 import friends from "@/app/common/data/friends.json";
+
+const props = defineProps({
+  tab: {
+    required: true
+  }
+});
 </script>
 
 <style scoped>

@@ -30,7 +30,7 @@
       </ul>
 
       <!--    direct messages-->
-      <div class="flex justify-between mt-5 pl-3 pr-3 text-xs text-gray-400 font-medium">
+      <div class="flex justify-between mt-5 pl-4 pr-3 text-xs dark:text-discord-black-50 text-gray-700 font-semibold">
         <h4>DIRECT MESSAGES</h4>
         <PlusIcon class="icon-16"/>
       </div>
@@ -38,29 +38,31 @@
       <!--    messages-->
       <ul class="pl-3 pr-3 mt-3">
         <!--      message 1-->
-        <li v-for="dm in DirectMessages" :key="dm.name" class="flex mb-0.5 items-center dark:hover:bg-discord-black-200 hover:bg-gray-100
-       p-1 rounded cursor-pointer group relative">
-          <div class="mr-3 relative">
-            <img :alt="dm.name" :src="dm.image"
-                 class="object-cover w-full h-full dm-thumbnail
-                 rounded-full border border-discord-black-300 group-hover:border-0">
-            <span v-if="dm.online" class="absolute status-indicator-wrapper bg-discord-black-400 rounded-full">
-              <span class="status-indicator bg-green-400 rounded-full"></span>
-            </span>
-          </div>
-          <div>
-            <span
-                class="text-sm block text-gray-400 font-medium menu-item-title group-hover:text-gray-500 dark:group-hover:text-gray-200">
-              {{ dm.name }}
-            </span>
-            <small v-if="dm.tagline"
-                   class="text-xs block text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-100">
-              {{ dm.tagline }}
-            </small>
-          </div>
-          <span class="group-hover:block hidden hover:text-gray-200 absolute right-0 text-gray-400 mr-1">
-          <CloseIcon class="icon-16"/>
-        </span>
+        <li v-for="dm in DirectMessages" :key="dm.name">
+          <router-link :to="{ name : 'DirectMessage', params : { channel: dm.name}}"
+                       class="messages-link">
+            <div class="mr-3 relative">
+              <img :alt="dm.name" :src="dm.image"
+                   class="object-cover w-full h-full dm-thumbnail
+                     rounded-full border border-discord-black-300 group-hover:border-0">
+              <span v-if="dm.online" class="absolute status-indicator-wrapper bg-discord-black-400 rounded-full">
+                  <span class="status-indicator bg-green-400 rounded-full"></span>
+                </span>
+            </div>
+            <div>
+                <span
+                    class="text-sm block text-discord-black-60 font-medium menu-item-title group-hover:text-gray-500 dark:group-hover:text-gray-200">
+                  {{ dm.name }}
+                </span>
+              <small v-if="dm.tagline"
+                     class="text-xs block text-discord-black-60 group-hover:text-gray-500 dark:group-hover:text-gray-100">
+                {{ dm.tagline }}
+              </small>
+            </div>
+            <span class="group-hover:block hidden hover:text-gray-200 absolute right-0 text-gray-400 mr-1">
+                <CloseIcon class="icon-16"/>
+              </span>
+          </router-link>
         </li>
 
       </ul>
@@ -68,24 +70,24 @@
 
     <!--    user profile-->
     <div class="py-2 px-2 dark:bg-discord-black-500 bg-gray-300 profile flex items-center justify-between">
-        <!--        profile details-->
-        <div class="mr-3 flex items-center">
-          <!-- profile picture-->
-          <div class="relative">
-            <img alt="irup io logo" class="object-cover min-w-full min-h-full dm-thumbnail rounded-full
+      <!--        profile details-->
+      <div class="mr-3 flex items-center">
+        <!-- profile picture-->
+        <div class="relative">
+          <img alt="irup io logo" class="object-cover min-w-full min-h-full dm-thumbnail rounded-full
            border border-gray-300 group-hover:border-0 bg-white"
-                 src="/images/placeholders/logosmalltransparent.png">
-            <span class="absolute status-indicator-wrapper bg-discord-black-400 rounded-full">
+               src="/images/placeholders/logosmalltransparent.png">
+          <span class="absolute status-indicator-wrapper bg-discord-black-400 rounded-full">
               <span class="status-indicator bg-green-400 rounded-full"></span>
             </span>
-          </div>
-
-          <!-- username -->
-          <div class="ml-2">
-            <span class="font-bold text-xs dark:text-white block text-gray-600 profile-name">optimus_m...</span>
-            <small class="text-xs dark:text-gray-400 text-gray-700 profile-hash">#8580</small>
-          </div>
         </div>
+
+        <!-- username -->
+        <div class="ml-2">
+          <span class="font-bold text-xs dark:text-white block text-gray-600 profile-name">optimus_m...</span>
+          <small class="text-xs dark:text-gray-400 text-gray-700 profile-hash">#8580</small>
+        </div>
+      </div>
 
       <!--        actions-->
       <div class="flex items-center dark:text-gray-400 text-gray-700 space-x-1">
@@ -145,7 +147,8 @@ const route = useRoute();
 }
 
 .sidemenu-item {
-  @apply w-full h-full rounded flex items-center px-2 text-gray-400;
+  @apply w-full h-full rounded flex items-center px-2;
+  color: #8e9292;
 }
 
 .sidemenu-item-active {
@@ -167,5 +170,9 @@ const route = useRoute();
 
 .profile-hash {
   line-height: 0 !important;
+}
+
+.messages-link {
+  @apply flex mb-0.5 items-center dark:hover:bg-discord-black-200 hover:bg-gray-100 p-1 rounded cursor-pointer group relative;
 }
 </style>
