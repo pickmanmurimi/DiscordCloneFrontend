@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .searchbar-btn {
-    @apply rounded dark:bg-discord-black-500 dark:text-gray-500 text-xs w-full text-left py-1 px-2 bg-gray-100 text-gray-400;
+    @apply rounded dark:bg-discord-black-600 dark:text-discord-black-60 text-xs w-full text-left py-1.5 px-2 bg-gray-100 text-gray-400;
 }
 
 .nav-link {
@@ -65,4 +65,8 @@
 .custom-scrollbar::-webkit-scrollbar-track {
     @apply dark:bg-discord-black-500;
     @apply bg-gray-200;
+}
+
+.text-secondary {
+    color: #8e9292;
 }

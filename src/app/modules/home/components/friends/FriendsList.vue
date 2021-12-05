@@ -13,7 +13,7 @@
             <ProfileImage :image="friend.image"/>
             <div class="ml-2">
               <span class="font-semibold text-gray-600 dark:text-gray-200 profile-name block">{{ friend.name }}</span>
-              <small class="block text-gray-400 dark:text-gray-400 font-semibold">{{ friend.tagline }}</small>
+              <small class="block text-gray-400 dark:text-discord-black-60 font-semibold">{{ friend.tagline }}</small>
             </div>
           </div>
           <!--            actions-->

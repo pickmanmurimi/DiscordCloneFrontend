@@ -30,7 +30,7 @@
       </ul>
 
       <!--    direct messages-->
-      <div class="flex justify-between mt-5 pl-3 pr-3 text-xs text-gray-400 font-medium">
+      <div class="flex justify-between mt-5 pl-4 pr-3 text-xs dark:text-discord-black-50 text-gray-700 font-semibold">
         <h4>DIRECT MESSAGES</h4>
         <PlusIcon class="icon-16"/>
       </div>
@@ -50,11 +50,11 @@
           </div>
           <div>
             <span
-                class="text-sm block text-gray-400 font-medium menu-item-title group-hover:text-gray-500 dark:group-hover:text-gray-200">
+                class="text-sm block text-discord-black-60 font-medium menu-item-title group-hover:text-gray-500 dark:group-hover:text-gray-200">
               {{ dm.name }}
             </span>
             <small v-if="dm.tagline"
-                   class="text-xs block text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-100">
+                   class="text-xs block text-discord-black-60 group-hover:text-gray-500 dark:group-hover:text-gray-100">
               {{ dm.tagline }}
             </small>
           </div>
@@ -145,7 +145,8 @@ const route = useRoute();
 }
 
 .sidemenu-item {
-  @apply w-full h-full rounded flex items-center px-2 text-gray-400;
+  @apply w-full h-full rounded flex items-center px-2;
+  color: #8e9292;
 }
 
 .sidemenu-item-active {
