@@ -1,14 +1,42 @@
 <template>
   <div class="relative">
     <!-- -------------------------------------------------------------------------------------------------------------->
+    <!-- mobile placeholder-->
+    <!-- -------------------------------------------------------------------------------------------------------------->
+    <div class="dark:bg-discord-black-500 h-screen w-full lg:hidden bg-gray-100">
+      <div class="flex w-full flex justify-center">
+        <img src="/images/placeholders/discord-logo.png" class="animate-pulse" width="200" height="200">
+      </div>
+
+      <div class="text-center mx-10">
+        <h1 class="text-discord-black-60 text-2xl">Too bad 😩, the mobile version is not ready yet.</h1>
+        <h1 class="text-discord-black-60 text-xl mt-10">
+          It needs some work, but its sure coming 😀,I will surely update on my socials once ready.
+        </h1>
+        <h1 class="text-discord-black-60 text-xl mt-10">
+          <span class="mr-2">@linkedin:</span>
+          <a href="https://www.linkedin.com/in/pickman-murimi/"
+                        class="px-5 py-0.5 border dark:border-gray-700 border-gray-300 hover:shadow rounded"> Pickman Murimi </a>
+        </h1>
+      </div>
+
+      <div class="flex w-full flex justify-center mt-10 text-discord-black-60 text-xl">
+        <span class="mr-2">Check out my portfolio</span>
+        <a href="https://irup.io" class="px-5 py-0.5 border dark:border-gray-700 border-gray-300 hover:shadow rounded">
+          irup.io
+        </a>
+      </div>
+    </div>
+
+    <!-- -------------------------------------------------------------------------------------------------------------->
     <!-- sidebar-->
     <!-- -------------------------------------------------------------------------------------------------------------->
-    <SideBar/>
+    <SideBar class="hidden md:block"/>
 
     <!-- -------------------------------------------------------------------------------------------------------------->
     <!-- side menu-->
     <!-- -------------------------------------------------------------------------------------------------------------->
-    <div class="">
+    <div class="hidden md:block">
       <!-- styling for side menu-->
       <slot name="sideMenu"></slot>
     </div>
@@ -16,7 +44,7 @@
     <!-- -------------------------------------------------------------------------------------------------------------->
     <!-- main content-->
     <!-- -------------------------------------------------------------------------------------------------------------->
-    <div class="main-content dark:bg-discord-black-300 min-h-screen bg-gray-50 h-screen overflow-hidden">
+    <div class="main-content dark:bg-discord-black-300 min-h-screen bg-gray-50 h-screen overflow-hidden hidden md:block">
       <div class="w-full shadow" style="height: 48px">
         <slot name="topNav">
         </slot>
